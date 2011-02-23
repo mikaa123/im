@@ -5,3 +5,7 @@ Rake::TestTask.new do |t|
     t.verbose = true
 end
 
+task "run" do
+  puts `ruby -I lib bin/memo -a Mika -m "C'est moi"`
+end
+
