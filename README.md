@@ -11,28 +11,16 @@ Installation
 * * *
 Usage
 -----
-Add an entry
 
-    whats -a myIP -m "192.168.0.1"
-
-Or
-
-    whats -add myIP
-
-Retrieve an entry
-
-    whats myIP
-    # 192.168.0.1
-
-List all entries
-
+    whats -a my_ip -m "192.168.0.1"
+    whats -a some_directory -m "/some/deep/directory"
+    whats my_ip
+    > 192.168.0.1
+    whats some_directory
+    > /some/deep/directory
     whats -l
-
-Delete an entry
-
-    whats -d myIP
-
-Execute (for shell script entries)
-
-    whats -a files -m "ls -l"
-    whats -e files
+    > my_ip
+    > some_directory
+    whats -d my_ip
+    whats -l
+    > some_directory
