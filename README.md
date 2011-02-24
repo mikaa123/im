@@ -21,7 +21,12 @@ Start documenting
     im renaming a whole bunch of files
     im configuring apache, need to install a few packages
 
+Done with a task?
+
+    im --done
+
 Other useful commands
 
     im -l # Shows the log
     im -h
+    im -? # Shows the project and task you are working on

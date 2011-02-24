@@ -1,4 +1,9 @@
 module Im
+
+  ##
+  # Constitutes an entry in the log file
+  #
+
   class Entry
     def initialize project, task, message
       @project = project

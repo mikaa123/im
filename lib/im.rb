@@ -10,6 +10,7 @@ module Im
   TMP_FILE  = FOLDER+'/tmp'
   META_FILE = FOLDER+'/meta'
 
+  # Writes an entry object in the FILE_PATH file
   def self.write entry
     Dir.mkdir FOLDER unless Dir.exists? FOLDER
     f = File.open(FILE_PATH, 'a')

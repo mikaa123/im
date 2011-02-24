@@ -1,4 +1,10 @@
 module Im
+
+  ##
+  # Manipulates the META_FILE, which stores meta informations
+  # about the log file.
+  #
+
   class Meta
     attr_reader :project, :task
 
