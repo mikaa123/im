@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'im'
+
+app = Im::Application.new(ARGV).start
