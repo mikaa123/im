@@ -4,6 +4,7 @@ module Im
       @project = project
       @task = task
       @message = message
+      @timestamp = Time.now
     end
 
     def to_s
