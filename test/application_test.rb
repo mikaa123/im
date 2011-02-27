@@ -36,5 +36,11 @@ class ApplicationTest < Test::Unit::TestCase
       assert_equal "i'm describing my task", app.options[:message]
     end
 
+    should "handle --exporting-to CSV"  do
+      app = Im::Application.new %w(--exporting-to CSV)
+      app.start
+      assert_equal "CSV", app.options[:format]
+    end
+
   end
 end

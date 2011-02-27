@@ -5,6 +5,11 @@ module Im
   #
 
   class Entry
+    attr_accessor :project
+    attr_accessor :task
+    attr_accessor :message
+    attr_accessor :timestamp
+
     def initialize project, task, message
       @project = project
       @task = task

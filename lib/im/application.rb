@@ -40,7 +40,7 @@ module Im
         end
 
         opts.on("-l", "--log",  "shows the recent entries") do
-          Im.show_log
+          Log.show_log
         end
 
         opts.on("-h", "--help",  "Shows this message") do
@@ -49,6 +49,11 @@ module Im
 
         opts.on("-?", "Shows the current project and task") do
           puts "Working on #{@meta.project}, doing #{@meta.task}" unless @meta.project.nil? or @meta.task.nil?
+        end
+
+        opts.on("-e", "--exporting-to FORMAT" "Export the log to the specified format") do |format|
+          @options[:format] = format
+          puts Log.export_to_csv if format.eql? 'csv'
         end
 
         opts.on("--done", "Terminate the current task") do
@@ -74,7 +79,7 @@ module Im
           "use: im --doing task_name"
      else
         new_entry = Entry.new @meta.project, @meta.task, msg
-        Im.write new_entry
+        Log.write new_entry
      end
     end
 
